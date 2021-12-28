@@ -1,8 +1,8 @@
-FROM wurstmeister/base
+FROM chang/base
 
-MAINTAINER Wurstmeister 
+MAINTAINER Chang 
 
-RUN wget -q -O - http://mirrors.sonic.net/apache/storm/apache-storm-0.9.4/apache-storm-0.9.4.tar.gz | tar -xzf - -C /opt
+RUN wget -q -O - http://archive.apache.org/dist/storm/apache-storm-0.9.4/apache-storm-0.9.4.tar.gz | tar -xzf - -C /opt
 
 ENV STORM_HOME /opt/apache-storm-0.9.4
 RUN groupadd storm; useradd --gid storm --home-dir /home/storm --create-home --shell /bin/bash storm; chown -R storm:storm $STORM_HOME; mkdir /var/log/storm ; chown -R storm:storm /var/log/storm

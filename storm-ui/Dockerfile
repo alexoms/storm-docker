@@ -1,5 +1,5 @@
-FROM wurstmeister/storm:0.9.4
-MAINTAINER Wurstmeister
+FROM chang/storm
+MAINTAINER Chang
 RUN /usr/bin/config-supervisord.sh ui
 
 EXPOSE 8080
