@@ -1,9 +1,11 @@
 #!/bin/bash
 
 
-# this is the base url of your AWS ECR (elastic container repository)
-ECR_REPO_BASE_URL=365696073803.dkr.ecr.us-east-1.amazonaws.com
+set -a # export all variables created next
+source aws-ecr.properties
+set +a # stop exporting
 
+echo "Using $ECR_REPO_BASE_URL"
 docker build -t="chang/base" os-base
 docker tag chang/base:latest $ECR_REPO_BASE_URL/storm-base:latest
 docker push $ECR_REPO_BASE_URL/storm-base:latest
