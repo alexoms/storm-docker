@@ -2,7 +2,7 @@ FROM chang/base
 
 MAINTAINER Chang 
 
-ENV STORM_VER apache-storm-0.9.2-incubating
+ENV STORM_VER apache-storm-2.3.0
 RUN wget -q -O - http://archive.apache.org/dist/storm/${STORM_VER}/${STORM_VER}.tar.gz | tar -xzf - -C /opt
 
 ENV STORM_HOME /opt/${STORM_VER}
