@@ -1,4 +1,4 @@
-FROM chang/base
+FROM chang/base:2.3.0-storm
 
 MAINTAINER Chang 
 

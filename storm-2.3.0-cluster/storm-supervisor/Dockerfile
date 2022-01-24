@@ -1,4 +1,4 @@
-FROM chang/storm
+FROM chang/storm:2.3.0-storm
 MAINTAINER Chang
 
 EXPOSE 6700
