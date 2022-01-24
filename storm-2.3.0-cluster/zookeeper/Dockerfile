@@ -3,7 +3,7 @@ FROM chang/base:2.3.0-storm
 MAINTAINER Chang
 
 # was 3.4.13
-ENV ZOOKEEPER_VERSION 3.7.0
+ENV ZOOKEEPER_VERSION 3.3.3
 
 #Download Zookeeper
 RUN wget -q https://archive.apache.org/dist/zookeeper/zookeeper-${ZOOKEEPER_VERSION}/apache-zookeeper-${ZOOKEEPER_VERSION}.tar.gz && \
