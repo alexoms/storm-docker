@@ -1,4 +1,4 @@
-FROM chang/storm
+FROM chang/storm:0.9.2-storm
 MAINTAINER Chang
 RUN /usr/bin/config-supervisord.sh ui
 
