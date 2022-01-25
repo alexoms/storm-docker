@@ -1,9 +1,11 @@
-FROM ubuntu:focal
+#FROM ubuntu:focal
+FROM openjdk:11-jre-slim
 MAINTAINER Chang
 USER root
 ENV DEBIAN_FRONTEND=noninteractive
-RUN apt-get update; apt-get install -y unzip openjdk-17-jre-headless wget python nano supervisor docker.io openssh-server gpg
-ENV JAVA_HOME /usr/lib/jvm/java-17-openjdk-amd64/
+#openjdk-17-jre-headless
+RUN apt-get update; apt-get install -y unzip  wget python nano supervisor docker.io openssh-server gpg
+ENV JAVA_HOME /usr/lib/jvm/java-11-openjdk-amd64/
 RUN echo 'root:chang' | chpasswd
 RUN mkdir /var/run/sshd
 
