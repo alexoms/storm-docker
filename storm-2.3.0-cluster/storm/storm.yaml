@@ -1,5 +1,4 @@
-storm.zookeeper.servers:
-    - "zookeeper.storm"
+storm.zookeeper.servers: ["zookeeper.storm"]
 nimbus.host: "nimbus100.storm"
 nimbus.seeds: ["nimbus100.storm"]
 drpc.servers:
