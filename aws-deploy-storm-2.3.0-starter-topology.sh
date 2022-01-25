@@ -1,0 +1,2 @@
+#/bin/bash
+/data/apache-storm-2.3.0/bin/storm jar /data/apache-storm-2.3.0/examples/storm-starter/target/storm-starter-2.3.0.jar org.apache.storm.starter.RollingTopWords production-topology -c nimbus.host=nimbus100.storm -c nimbus.thrift.port=6627
