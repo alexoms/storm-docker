@@ -5,7 +5,7 @@ MAINTAINER Chang
 ENV STORM_VER apache-storm-2.3.0
 
 # run get-largefiles-2.3.0.sh before building dockerfile so as to pre-download the large files
-ADD ../archive/${STORM_VER}.tar.gz /archive/
+ADD ../../../archive/${STORM_VER}.tar.gz /archive/
 RUN tar -xzf /archive/${STORM_VER}.tar.gz -C /opt
 
 #RUN wget -q -O - http://archive.apache.org/dist/storm/${STORM_VER}/${STORM_VER}.tar.gz | tar -xzf - -C /opt
