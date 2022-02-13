@@ -6,7 +6,7 @@ MAINTAINER Chang
 ENV ZOOKEEPER_VERSION 3.7.0
 
 # run get-largefiles-2.3.0.sh before building dockerfile so as to pre-download the large files
-ADD ../../../archive/apache-zookeeper-${ZOOKEEPER_VERSION}-bin.tar.gz ../archive/KEYS ../archive/apache-zookeeper-${ZOOKEEPER_VERSION}-bin.tar.gz.asc ../archive/apache-zookeeper-${ZOOKEEPER_VERSION}-bin.tar.gz.sha512 /archive/
+ADD apache-zookeeper-${ZOOKEEPER_VERSION}-bin.tar.gz KEYS apache-zookeeper-${ZOOKEEPER_VERSION}-bin.tar.gz.asc apache-zookeeper-${ZOOKEEPER_VERSION}-bin.tar.gz.sha512 /archive/
 
 RUN tar -xzf /archive/${STORM_VER}.tar.gz -C /opt
 
