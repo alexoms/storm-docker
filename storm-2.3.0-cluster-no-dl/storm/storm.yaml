@@ -1,0 +1,8 @@
+storm.zookeeper.servers: 
+  - "zookeeper.storm"
+nimbus.seeds:
+  - "nimbus100.storm"
+drpc.servers:
+  - "nimbus100.storm"
+drpc.port: 3772
+drpc.invocations.port: 3773
