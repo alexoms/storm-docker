@@ -3,4 +3,5 @@
 
 echo "storm.local.hostname: `hostname -i`" >> $STORM_HOME/conf/storm.yaml
 
-/usr/sbin/sshd && supervisord
+#/usr/sbin/sshd && supervisord
+supervisord
