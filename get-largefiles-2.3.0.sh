@@ -10,5 +10,6 @@ wget -q -N --show-progress https://archive.apache.org/dist/zookeeper/zookeeper-$
 wget -q -N --show-progress https://archive.apache.org/dist/zookeeper/zookeeper-${ZOOKEEPER_VERSION}/apache-zookeeper-${ZOOKEEPER_VERSION}-bin.tar.gz.sha512
 cd ../storm/
 wget -q -N --show-progress http://archive.apache.org/dist/storm/${STORM_VER}/${STORM_VER}.tar.gz
-
+cd ../storm-nimbus/
+wget -q -N --show-progress https://repo1.maven.org/maven2/org/apache/storm/storm-starter/2.3.0/storm-starter-2.3.0.jar
 
