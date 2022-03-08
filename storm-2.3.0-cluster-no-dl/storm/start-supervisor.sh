@@ -3,5 +3,13 @@
 
 echo "storm.local.hostname: `hostname -i`" >> $STORM_HOME/conf/storm.yaml
 
+# create sample file showing env variables extracted from sec
+export envtestdir=/tmp/env_extracted.txt
+touch $envtestdir
+if [ -f "$envtestdir" ]
+then 
+    echo "$TEST1_DB_PW_ENC" > "$envtestdir"
+fi
+
 /usr/sbin/sshd && supervisord
 #supervisord

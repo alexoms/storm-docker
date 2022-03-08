@@ -1,2 +1,2 @@
 #/bin/bash
-~/apache-storm-2.3.0/bin/storm jar ~/storm-starter-2.3.0.jar org.apache.storm.starter.WordCountTopology production-topology-wordcount -c nimbus.host=nimbus100.storm -c nimbus.thrift.port=6627
+storm jar /usr/share/storm/storm-starter-2.3.0.jar org.apache.storm.starter.WordCountTopology production-topology-wordcount -c nimbus.host=nimbus100.storm -c nimbus.thrift.port=6627
