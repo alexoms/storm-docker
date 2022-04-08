@@ -6,7 +6,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 #openjdk-17-jre-headless
 RUN apt-get update; apt-get install -y unzip openjdk-11-jre-headless wget python nano supervisor docker.io openssh-server gpg
 ENV JAVA_HOME /usr/lib/jvm/java-11-openjdk-amd64/
-RUN echo 'root:g3KWL6!92Gd' | chpasswd
+RUN echo 'root:d-n^GacCGf)S0Z-' | chpasswd
 RUN mkdir /var/run/sshd
 
 
