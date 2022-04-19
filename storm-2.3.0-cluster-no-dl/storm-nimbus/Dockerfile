@@ -16,4 +16,6 @@ ADD rebalance-sample-topology.sh /usr/bin/rebalance-sample-topology.sh
 RUN chmod a+x /usr/bin/rebalance-sample-topology.sh
 ADD kill-sample-topology.sh /usr/bin/kill-sample-topology.sh
 RUN chmod a+x /usr/bin/kill-sample-topology.sh
+ADD start-local-sample-topology.sh /usr/bin/start-local-sample-topology.sh
+RUN chmod a+x /usr/bin/start-local-sample-topology.sh
 CMD /usr/bin/start-supervisor.sh
