@@ -1,6 +1,7 @@
 storm.zookeeper.servers: 
   - "zookeeper1.storm"
   - "zookeeper2.storm"
+  - "zookeeper3.storm"
 nimbus.seeds:
   - "nimbus100.storm"
 drpc.servers:
