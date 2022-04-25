@@ -4,7 +4,7 @@ sed -i -r 's|#autopurge|autopurge|g' $ZK_HOME/conf/zoo.cfg
 # Configure zookeeper cluster ensemble (https://zookeeper.apache.org/doc/r3.1.2/zookeeperAdmin.html)
 echo 'initLimit=5' >> $ZK_HOME/conf/zoo.cfg
 echo 'syncLimit=2' >> $ZK_HOME/conf/zoo.cfg
-#echo 'electionPortBindRetry=0' >> $ZK_HOME/conf/zoo.cfg
+echo 'zookeeper.electionPortBindRetry=0' >> $ZK_HOME/conf/zoo.cfg
 
 # get zookeeper myid from ECS container level properties specified in task definition (env var named ZOOKEEPER_MYID)
 # Will need a zookeeper1 task definition where ZOOKEEPER_MYID=1 in the container env var
