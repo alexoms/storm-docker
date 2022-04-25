@@ -8,4 +8,16 @@ echo 'server.1=zookeeper1.storm:2888:3888' >> $ZK_HOME/conf/zoo.cfg
 echo 'server.2=zookeeper2.storm:2888:3888' >> $ZK_HOME/conf/zoo.cfg
 echo 'server.3=zookeeper3.storm:2888:3888' >> $ZK_HOME/conf/zoo.cfg
 
+# get zookeeper myid from ECS container level properties specified in task definition (env var named ZOOKEEPER_MYID)
+# Will need a zookeeper1 task definition where ZOOKEEPER_MYID=1 in the container env var
+# Will need a zookeeper2 task definition where ZOOKEEPER_MYID=2 in the container env var
+# Will need a zookeeper3 task definition where ZOOKEEPER_MYID=3 in the container env var
+
+export envmyiddir=$ZK_HOME/data/myid
+touch $envmyiddir
+if [ -f "$envmyiddir" ]
+then 
+    echo "$ZOOKEEPER_MYID" > "$envmyiddir"
+fi
+
 $ZK_HOME/bin/zkServer.sh start-foreground
