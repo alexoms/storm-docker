@@ -8,3 +8,7 @@ drpc.servers:
   - "nimbus100.storm"
 drpc.port: 3772
 drpc.invocations.port: 3773
+# added -XX:+IgnoreUnrecognizedVMOptions to ignore JDK11 unrecognized options such as -XX:+PrintGCDetails
+# https://docs.oracle.com/javase/9/tools/java.htm#GUID-BE93ABDC-999C-4CB5-A88B-1994AAAC74D5__CONVERTGCLOGGINGFLAGSTOXLOG-A5046BD1
+worker.childopts: "-Xmx%HEAP-MEM%m -XX:+IgnoreUnrecognizedVMOptions -XX:+PrintGCDetails -Xloggc:artifacts/gc.log -XX:+PrintGCDateStamps -XX:+PrintGCTimeStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=10 -XX:GCLogFileSize=1M -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=artifacts/heapdump"
+worker.gc.childopts: ""
